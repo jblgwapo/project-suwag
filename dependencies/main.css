@@ -1,0 +1,31 @@
+*{
+  box-sizing: border-box;
+
+}
+
+
+#print{
+font-size: 1px;
+border: 1px solid black;
+width:7.5in;
+height:10in;
+max-width:21.59cm;
+
+text-align: justify;
+text-justify: inter-word;
+display: inline-block;
+}
+#tab{ display: inline-block; height: 0.5cm; }
+#word{ display: inline-block;  margin: 0 0.3cm 0.2cm 0; }
+#endl{ height: 0.7cm; display: block;}
+
+
+img{ image-rendering: crisp-edges;}
+
+
+main { display: block; min-width: 1200px;}
+#gui { width:400px; padding: 10px; display: inline-block; vertical-align: top;}
+
+
+
+input[type="text"],textarea { width: 100%;}

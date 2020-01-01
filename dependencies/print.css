@@ -1,0 +1,30 @@
+
+    @media print{
+        body{
+
+        width:19.05cm;
+        height:25.4cm;
+
+      }
+    }
+
+    @page{
+        body{
+        width:19.05cm;
+        height:25.4cm;
+        margin: 1.27cm;
+      }
+    }
+        body{
+
+        width:19.05cm;
+        height:25.4cm;
+        max-width:21.59cm;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      img{ image-rendering: crisp-edges;}
+    #tab{ display: inline-block; height: 0.5cm; }
+    #endl{ height: 0.7cm; display: block;}
+    #word{ display: inline-block; margin: 0 0.3cm 0.2cm 0; }

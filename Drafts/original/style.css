@@ -1,0 +1,32 @@
+
+    @media print{
+        body{
+        width:10cm;
+        height:25.4cm;
+        margin: 0;
+      }
+    }
+
+    @page{
+        body{
+        width:10cm;
+        height:25.4cm;
+        margin: 0;
+      }
+    }
+        body{
+
+
+        width:19.05cm;
+        height:25.4cm;
+        max-width:21.59cm;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+
+    #paragraph { margin: 0 0 0.2cm 0;}
+    [src='~/0.png'] {  width: 19.05cm; display: block; height: 0.7cm;}
+
+    #word{ display: inline-block; height: 0.5cm; margin: 0 0.3cm 0.2cm 0; }
+    img {height: 0.5cm; display: inline-block;}
