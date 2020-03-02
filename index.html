@@ -5,92 +5,82 @@
     <title>Automatice Lab Reporter</title>
   </head>
 
-  <script src="dependencies/engine.js"></script>
-  <script src="dependencies/main.js"></script>
+  <script src="resources/scripts/engine.js"></script>
+  <script src="resources/scripts/main.js"></script>
   <script>
 
-
-
-
-
   </script>
-  <link rel="stylesheet" type="text/css" href="dependencies/main.css">
+  <link rel="stylesheet" type="text/css" href="resources/styles/gui.css">
+  <link rel="stylesheet" type="text/css" href="resources/styles/format.css">
+  <link rel="stylesheet" type="text/css" href="resources/styles/scale.css">
   <body>
+    <header>
+      <img src="resources/images/menu.png" class="menu" alt="menu" onclick="System.save()">
+      iLabs
+    </header>
+    <nav>
+      <ul id="pages">
+
+      </ul>
+      <ul>
+        <li id="addPage"><center>+</center></li>
+      </ul>
+    </nav>
     <main>
-      <section id="gui">
-        Filename
-        <input type="text" name="title" value="">
-        Header Text
-              <textarea id="headerText" rows="8" cols="80">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</textarea>
-              Align:
-              <select id="headerTextAlign" name="" onchange="Preview()">
-                <option value="left">Left</option>
-                <option value="center">Center</option>
-                <option value="justify">Justify</option>
-              </select><br>
-              Indent: <input type="checkbox" id="headerIndent" onchange="Preview()"><br><br>
-        Upper Text
-              <textarea id="upperText" rows="8" cols="80"></textarea>
-              Align:
-              <select id="upperTextAlign" name="" onchange="Preview()">
-                <option value="left">Left</option>
-                <option value="center">Center</option>
-                <option value="justify">Justify</option>
-              </select><br>
-              Indent: <input type="checkbox" id="upperIndent" onchange="Preview()"><br><br>
+      <div preview page-margin="0.5">
 
-        Image<input type="file" id="centerImage" value=""><br>Show Image<input type="checkbox" id="showImage" onchange="Preview()"><br><br>
 
-        Lower Text
-              <textarea id="lowerText" rows="8" cols="80"></textarea>
-              Align:
-              <select id="lowerTextAlign" name="" onchange="Preview()">
-                <option value="left">Left</option>
-                <option value="center">Center</option>
-                <option value="justify">Justify</option>
-              </select><br>
-              Indent: <input type="checkbox" id="lowerIndent" onchange="Preview()"><br><br>
-        <hr>
-        <table>
-          <tr>
-            <td>Top Inconsistency:</td><td><input type="number" id="topDeviation" value="3"></td>
-          </tr>
+      </div>
+      <div editor>
+
+        <header>
+          <span style="float:right; cursor:pointer;" id="hide">Hide</span>
+          <h3>Editor</h3>
+        </header>
+        <section content>
+          <h3>Content</h3>
+          <textarea name="textbox" id="textbox" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </textarea>
+          <br><br>
+          Image: <select class="" id="image">
+            <optgroup label="With Image">
+              <option value="top">Image on top</option>
+              <option value="center">Image on center</option>
+              <option value="bottom">Image on bottom</option>
+            </optgroup>
+            <optgroup label="Without Image">
+              <option value="none" selected>No image</option>
+            </optgroup>
+          </select>
+          <br>Upload:<input type="file" id="src" value="">
+          <br><br>
+
+        </section>
+        <section format>
+          <h3>Format</h3>
+          <div arrangement></div>
+        </section>
+        <section preference>
+          <h3>Preferences</h3><br>
+          <table>
             <tr>
-              <td>Bottom Inconsistency:</td><td><input type="number" id="bottomDeviation" value="3"></td>
+              <td>Font Size (mm)</td>
             </tr>
             <tr>
-              <td>Left Inconsistency:</td><td><input type="number" id="leftDeviation" value="3"></td>
+              <td><input type="number" id="fs" onchange="Editor.settings()" value="5"></td>
             </tr>
             <tr>
-              <td>Character Spacing:</td><td><input type="number" id="charDistance" value="3"></td>
+              <td>Line Height (mm)</td>
             </tr>
             <tr>
-              <td>Max Width:</td><td><input type="number" id="maxWidth" value="500"></td>
+              <td><input type="number" id="lh" onchange="Editor.settings()" value="7"></td>
             </tr>
             <tr>
-              <td>Min Width:</td><td><input type="number" id="minWidth" value="200"></td>
-            </tr>
-        </table>
+          </table>
 
-        <hr>
-        <button type="button" name="button" onclick="Save()">Save</button>
-        <button type="button" name="button" onclick="Preview()">Preview</button>
-        <button type="button" name="button" onclick="Print()">Print</button>
-      </section>
+        </section>
 
-
-
-
-      <section id="print">
-
-      </section>
-
-
-
-
-
-
-
+      </div>
     </main>
 
 

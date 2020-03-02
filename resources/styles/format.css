@@ -1,0 +1,177 @@
+img{ image-rendering: crisp-edges; box-sizing: border-box;}
+
+
+
+
+
+.page {
+  margin-top: 1em;
+  width: 8.5in;
+  height: 11in;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(32, 32, 32, 0.3), 0 6px 15px 0 rgba(32, 32, 32, 0.1);
+}
+
+.page[active]{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 200, 0.7), 0 6px 15px 0 rgba(0, 0, 200, 0.2);
+}
+
+/* Settings */
+/* Margin */
+
+
+[page-margin="1"] > .page {
+  height: 9in;
+  width: 6.5in;
+  padding: 1in;
+}
+[page-margin="0.5"] > .page {
+  height: 10in;
+  width: 7.5in;
+  padding: 0.5in;
+}
+
+/* Font size */
+[font-size="4"] div[word]{ height: 4mm; font-size: 4mm;}
+[font-size="5"] div[word]{ height: 5mm; font-size:5mm;}
+[font-size="6"] div[word]{ height: 6mm; font-size: 6mm;}
+[font-size="7"] div[word]{ height: 7mm; font-size:7mm;}
+[font-size="8"] div[word]{ height: 8mm; font-size: 8mm;}
+[font-size="9"] div[word]{ height: 9mm; font-size:9mm;}
+[font-size="10"] div[word]{ height: 10mm; font-size: 10mm;}
+[font-size="11"] div[word]{ height: 11mm; font-size:11mm;}
+[font-size="12"] div[word]{ height: 12mm; font-size: 12mm;}
+[font-size="13"] div[word]{ height: 13mm; font-size:13mm;}
+[font-size="14"] div[word]{ height: 14mm; font-size: 14mm;}
+[font-size="15"] div[word]{ height: 15mm; font-size:15mm;}
+
+/* Spacing */
+[line-height="2"] article{ line-height: 2mm;}
+[line-height="3"] article{ line-height: 3mm;}
+[line-height="4"] article{ line-height: 4mm;}
+[line-height="5"] article{ line-height: 5mm;}
+[line-height="6"] article{ line-height: 6mm;}
+[line-height="7"] article{ line-height: 7mm;}
+[line-height="8"] article{ line-height: 8mm;}
+[line-height="9"] article{ line-height: 9mm;}
+[line-height="10"] article{ line-height: 10mm;}
+[line-height="11"] article{ line-height: 11mm;}
+[line-height="12"] article{ line-height: 12mm;}
+[line-height="13"] article{ line-height: 13mm;}
+[line-height="14"] article{ line-height: 14mm;}
+[line-height="15"] article{ line-height: 15mm;}
+[line-height="16"] article{ line-height: 16mm;}
+[line-height="17"] article{ line-height: 17mm;}
+
+article{
+  height: calc( (100% - 3in) / 2 );
+
+  border: 1px solid silver;
+  display: block;
+  padding: 0%;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+.upper > div { }
+
+      [image="top"] > .upper {
+        height: 3in !important;
+        width: 4in;
+        margin: auto;
+      }
+      [image="top"] > .upper > img {
+        height: 3in !important;
+        width: 4in !important;
+        background: blue;
+      }
+
+      [image="top"] > .center {
+        width: 100%;
+      }
+      [image="top"] > .bottom {
+        width: 100%;
+      }
+
+
+      [image="center"] > .upper {
+        width: 100%;
+        -webkit-flow-into: main;
+        -ms-flow-into: main;
+        flow-into: main;
+        position: relative;
+        height: 3.25in;
+
+      }
+      [image="center"] > .center {
+        position: relative;
+        height: 3in !important;
+        width: 4in !important;
+
+        overflow: hidden;
+        margin: .7mm auto 1.7mm auto;
+        display: block;
+      }
+      [image="center"] > .center > img {
+        height: 3in !important;
+        width: 4in !important;
+
+      }
+      [image="center"] > .bottom {
+        -webkit-flow-from: main;
+        flow-from: main;
+        -ms-flow-from: main;
+        width: 100%;
+        height: 3.55in;
+      }
+      [image="center"] > .bottom:last-child {
+        margin-bottom: 100%;
+        scroll-padding-top:3.25in;
+      }
+
+
+      [image="bottom"] > .upper {
+        width: 100%;
+      }
+      [image="bottom"] > .center {
+        width: 100%;
+      }
+      [image="bottom"] > .bottom {
+        height: 3in !important;
+        width: 4in;
+        margin: auto;
+      }
+      [image="bottom"] > .bottom > img {
+        height: 3in !important;
+        width: 4in !important;
+        background: blue;
+      }
+
+
+
+
+/* paragraph settings*/
+div[align="left"] [word]{ text-align: left; }
+div[align="right"] [word]{ text-align: right; }
+div[align="center"] [word]{ text-align: center; }
+div[align="justify"] [word]{ text-align: justify; }
+
+[indent="true"] > div:first-child{ margin-left: 0.5in;}
+[indent="false"] > div:first-child { margin-left: 0;}
+
+[word] img{display: inline-block; }
+[word]{
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+
+
+@media print {
+  article{border:0px solid white;}
+  .page{
+    box-shadow: 0 0 white;
+  }
+}

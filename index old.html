@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Automatice Lab Reporter</title>
+  </head>
+
+  <script src="dependencies/engine.js"></script>
+  <script src="dependencies/main.js"></script>
+  <script>
+
+
+
+
+
+  </script>
+  <link rel="stylesheet" type="text/css" href="dependencies/main.css">
+  <body>
+    <main>
+      <section id="gui">
+        Filename
+        <input type="text" name="title" value="">
+        Header Text
+              <textarea id="headerText" rows="8" cols="80">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</textarea>
+              Align:
+              <select id="headerTextAlign" name="" onchange="Preview()">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="justify">Justify</option>
+              </select><br>
+              Indent: <input type="checkbox" id="headerIndent" onchange="Preview()"><br><br>
+        Upper Text
+              <textarea id="upperText" rows="8" cols="80"></textarea>
+              Align:
+              <select id="upperTextAlign" name="" onchange="Preview()">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="justify">Justify</option>
+              </select><br>
+              Indent: <input type="checkbox" id="upperIndent" onchange="Preview()"><br><br>
+
+        Image<input type="file" id="centerImage" value=""><br>
+        Show Image<input type="checkbox" id="showImage" onchange="Preview()"><br><br>
+
+        Lower Text
+              <textarea id="lowerText" rows="8" cols="80"></textarea>
+              Align:
+              <select id="lowerTextAlign" name="" onchange="Preview()">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="justify">Justify</option>
+              </select><br>
+              Indent: <input type="checkbox" id="lowerIndent" onchange="Preview()"><br><br>
+        <hr>
+        <table>
+          <tr>
+            <td>Top Inconsistency:</td><td><input type="number" id="topDeviation" value="3"></td>
+          </tr>
+            <tr>
+              <td>Bottom Inconsistency:</td><td><input type="number" id="bottomDeviation" value="3"></td>
+            </tr>
+            <tr>
+              <td>Left Inconsistency:</td><td><input type="number" id="leftDeviation" value="3"></td>
+            </tr>
+            <tr>
+              <td>Character Spacing:</td><td><input type="number" id="charDistance" value="3"></td>
+            </tr>
+            <tr>
+              <td>Max Width:</td><td><input type="number" id="maxWidth" value="500"></td>
+            </tr>
+            <tr>
+              <td>Min Width:</td><td><input type="number" id="minWidth" value="200"></td>
+            </tr>
+        </table>
+
+        <hr>
+        <button type="button" name="button" onclick="Save()">Save</button>
+        <button type="button" name="button" onclick="Preview()">Preview</button>
+        <button type="button" name="button" onclick="Print()">Print</button>
+      </section>
+
+
+
+
+      <section id="print">
+
+      </section>
+
+
+
+
+
+
+
+    </main>
+
+
+  </body>
+</html>
